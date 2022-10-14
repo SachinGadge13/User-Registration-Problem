@@ -108,5 +108,18 @@ public class UserRegistrationTest {
         boolean result = userRegistration.passwordRule3("123456789");
         Assert.assertEquals(false, result);
     }
+    /**
+     * Unit test for validating password with exactly one special character
+     */
+    @Test
+    public void givenPasswordRule4_WhenProper_ShouldReturnTrue() {
+        boolean result = userRegistration.passwordRule4("1234@Abc");
+        Assert.assertEquals(true, result);
+    }
+    @Test
+    public void givenPasswordRule4_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegistration.passwordRule4("akdj@ds@A");
+        Assert.assertEquals(false, result);
+    }
 
 }
