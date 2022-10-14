@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class UserRegistrationTest {
+
 	UserRegistration userRegistration;
 	@Before
 	public void before() {
